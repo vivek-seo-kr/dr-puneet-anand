@@ -1,227 +1,447 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Puneet Anand - Pediatrician & Neonatologist</title>
-    <!-- Tailwind CSS for modern styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons for professional medical iconography -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Google Fonts: Inter -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .bg-grid { background-image: radial-gradient(#10b981 0.5px, transparent 0.5px); background-size: 24px 24px; }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .delay-100 { animation-delay: 0.1s; }
+      .delay-200 { animation-delay: 0.2s; }
+      .delay-300 { animation-delay: 0.3s; }
     </style>
-</head>
-<body class="bg-slate-50 text-slate-900">
-
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center gap-2">
-                    <div class="bg-emerald-600 p-1.5 rounded-lg">
-                        <i data-lucide="stethoscope" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <span class="text-xl font-bold tracking-tight text-slate-900">Dr. Puneet Anand</span>
-                </div>
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                    <a href="#about" class="hover:text-emerald-600 transition-colors">About</a>
-                    <a href="#services" class="hover:text-emerald-600 transition-colors">Services</a>
-                    <a href="#location" class="hover:text-emerald-600 transition-colors">Location</a>
-                    <a href="https://share.google/bbP8uDkVH4LJvZ5A4" target="_blank" class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition-all shadow-sm flex items-center gap-2">
-                        Book Appointment <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center gap-2">
+            <div class="bg-emerald-600 p-1.5 rounded-lg">
+              <i data-lucide="stethoscope" class="w-6 h-6 text-white"></i>
             </div>
+            <span class="text-xl font-bold tracking-tight text-slate-900">Dr. Puneet Anand</span>
+          </div>
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href="#about" class="hover:text-emerald-600 transition-colors">About</a>
+            <a href="#services" class="hover:text-emerald-600 transition-colors">Services</a>
+            <a href="#location" class="hover:text-emerald-600 transition-colors">Location</a>
+            <a 
+              href="https://share.google/bbP8uDkVH4LJvZ5A4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition-all shadow-sm flex items-center gap-2"
+            >
+              Book Appointment <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6">
-                        <i data-lucide="award" class="w-4 h-4"></i> Trusted Pediatric Care
-                    </div>
-                    <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-                        Expert Care for Your <span class="text-emerald-600">Little Ones</span>
-                    </h1>
-                    <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-                        Dr. Puneet Anand is a dedicated Pediatrician and Neonatologist providing compassionate, comprehensive healthcare for children from birth through adolescence.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://share.google/bbP8uDkVH4LJvZ5A4" target="_blank" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-emerald-600 text-white font-bold text-lg hover:bg-emerald-700 transition-all shadow-lg">
-                            Book Appointment <i data-lucide="chevron-right" class="ml-2 w-5 h-5"></i>
-                        </a>
-                        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white border border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition-all">
-                            Our Services
-                        </a>
-                    </div>
-                    
-                    <div class="mt-12 flex items-center gap-8 border-t border-slate-200 pt-8">
-                        <div>
-                            <div class="text-2xl font-bold text-slate-900">15+</div>
-                            <div class="text-sm text-slate-500">Years Experience</div>
-                        </div>
-                        <div class="w-px h-10 bg-slate-200"></div>
-                        <div>
-                            <div class="text-2xl font-bold text-slate-900">5k+</div>
-                            <div class="text-sm text-slate-500">Happy Families</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 lg:mt-0 relative">
-                    <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10">
-                        <img src="https://picsum.photos/seed/doctor-puneet/800/1000" alt="Dr. Puneet Anand" class="w-full h-full object-cover">
-                    </div>
-                    <!-- Decorative elements -->
-                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
-                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-teal-100 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+          <div class="fade-in">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6">
+              <i data-lucide="award" class="w-4 h-4"></i> Trusted Pediatric Care
             </div>
+            <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+              Expert Care for Your <span class="text-emerald-600 text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Little Ones</span>
+            </h1>
+            <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+              Dr. Puneet Anand is a dedicated Pediatrician and Neonatologist providing compassionate, comprehensive healthcare for children from birth through adolescence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="https://share.google/bbP8uDkVH4LJvZ5A4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-emerald-600 text-white font-bold text-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-emerald-200/50 group"
+              >
+                Book Appointment
+                <i data-lucide="chevron-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <a 
+                href="#services"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white border border-slate-200 text-slate-700 font-bold text-lg hover:bg-slate-50 transition-all"
+              >
+                Our Services
+              </a>
+            </div>
+            
+            <div class="mt-12 flex items-center gap-8 border-t border-slate-200 pt-8">
+              <div>
+                <div class="text-2xl font-bold text-slate-900">15+</div>
+                <div class="text-sm text-slate-500">Years Experience</div>
+              </div>
+              <div class="w-px h-10 bg-slate-200"></div>
+              <div>
+                <div class="text-2xl font-bold text-slate-900">5k+</div>
+                <div class="text-sm text-slate-500">Happy Families</div>
+              </div>
+              <div class="w-px h-10 bg-slate-200"></div>
+              <div class="flex items-center gap-1">
+                <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-yellow-400"></i>
+                <div class="text-2xl font-bold text-slate-900">4.9</div>
+                <div class="text-sm text-slate-500 ml-1">Rating</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 lg:mt-0 relative fade-in delay-200">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10">
+              <img 
+                src="https://picsum.photos/seed/doctor-puneet/800/1000" 
+                alt="Dr. Puneet Anand" 
+                class="w-full h-full object-cover"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -top-6 -right-6 w-32 h-32 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+            <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-teal-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-700"></div>
+            
+            <div class="absolute bottom-8 -left-8 z-20 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden sm:block">
+              <div class="flex items-center gap-3">
+                <div class="bg-emerald-100 p-2 rounded-lg">
+                  <i data-lucide="users" class="w-6 h-6 text-emerald-600"></i>
+                </div>
+                <div>
+                  <div class="text-sm font-bold text-slate-900">Expert Neonatologist</div>
+                  <div class="text-xs text-slate-500">Specialized Newborn Care</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-            <h2 class="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Our Specialties</h2>
-            <p class="text-4xl font-extrabold text-slate-900 tracking-tight">Comprehensive Pediatric Services</p>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+        <h2 class="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Our Specialties</h2>
+        <p class="text-4xl font-extrabold text-slate-900 tracking-tight">Comprehensive Pediatric Services</p>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          Providing a wide range of medical services tailored to the unique needs of children at every stage of their development.
+        </p>
+      </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
-                <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
-                    <i data-lucide="baby" class="w-7 h-7 text-emerald-600"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Newborn Care</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">Comprehensive care for neonates, including routine checkups and specialized neonatal support.</p>
-            </div>
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
-                <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
-                    <i data-lucide="shield-check" class="w-7 h-7 text-emerald-600"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Vaccinations</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">Complete immunization schedules following the latest pediatric guidelines for all ages.</p>
-            </div>
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
-                <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
-                    <i data-lucide="heart-pulse" class="w-7 h-7 text-emerald-600"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Growth Monitoring</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">Regular tracking of physical and developmental milestones to ensure healthy growth.</p>
-            </div>
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
-                <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
-                    <i data-lucide="stethoscope" class="w-7 h-7 text-emerald-600"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">General Pediatrics</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">Expert diagnosis and treatment for common childhood illnesses and chronic conditions.</p>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Newborn Care -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
+          <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
+            <i data-lucide="baby" class="w-7 h-7 text-emerald-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Newborn Care</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Comprehensive care for neonates, including routine checkups and specialized neonatal support.
+          </p>
         </div>
+        <!-- Vaccinations -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
+          <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
+            <i data-lucide="shield-check" class="w-7 h-7 text-emerald-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Vaccinations</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Complete immunization schedules following the latest pediatric guidelines for all ages.
+          </p>
+        </div>
+        <!-- Growth Monitoring -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
+          <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
+            <i data-lucide="heart-pulse" class="w-7 h-7 text-emerald-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Growth Monitoring</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Regular tracking of physical and developmental milestones to ensure healthy growth.
+          </p>
+        </div>
+        <!-- General Pediatrics -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:shadow-lg transition-all">
+          <div class="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-100">
+            <i data-lucide="stethoscope" class="w-7 h-7 text-emerald-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">General Pediatrics</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
+            Expert diagnosis and treatment for common childhood illnesses and chronic conditions.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-24 bg-slate-50 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                <div class="relative mb-16 lg:mb-0">
-                    <div class="aspect-square rounded-3xl overflow-hidden shadow-xl">
-                        <img src="https://picsum.photos/seed/clinic/800/800" alt="Clinic Interior" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-8 rounded-3xl shadow-2xl max-w-xs">
-                        <p class="text-lg italic font-medium">"Every child deserves the best start in life. My mission is to provide expert care with a gentle touch."</p>
-                        <div class="mt-4 font-bold">— Dr. Puneet Anand</div>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">About the Doctor</h2>
-                    <h3 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-6">A Legacy of Excellence in Child Healthcare</h3>
-                    <div class="space-y-6 text-slate-600 leading-relaxed">
-                        <p>Dr. Puneet Anand is a highly qualified Pediatrician and Neonatologist with extensive experience in managing complex pediatric cases and neonatal emergencies.</p>
-                        <p>With a focus on evidence-based medicine and family-centered care, Dr. Anand has built a reputation for excellence in Delhi and the surrounding regions.</p>
-                    </div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          <div class="relative mb-16 lg:mb-0">
+            <div class="aspect-square rounded-3xl overflow-hidden shadow-xl">
+              <img 
+                src="https://picsum.photos/seed/clinic/800/800" 
+                alt="Clinic Interior" 
+                class="w-full h-full object-cover"
+                referrerpolicy="no-referrer"
+              />
             </div>
+            <div class="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-8 rounded-3xl shadow-2xl max-w-xs">
+              <p class="text-lg italic font-medium">
+                "Every child deserves the best start in life. My mission is to provide expert care with a gentle touch."
+              </p>
+              <div class="mt-4 font-bold">— Dr. Puneet Anand</div>
+            </div>
+          </div>
+          
+          <div>
+            <h2 class="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">About the Doctor</h2>
+            <h3 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-6">A Legacy of Excellence in Child Healthcare</h3>
+            <div class="space-y-6 text-slate-600 leading-relaxed">
+              <p>
+                Dr. Puneet Anand is a highly qualified Pediatrician and Neonatologist with extensive experience in managing complex pediatric cases and neonatal emergencies.
+              </p>
+              <p>
+                With a focus on evidence-based medicine and family-centered care, Dr. Anand has built a reputation for excellence in Delhi and the surrounding regions. He believes in building long-term relationships with families to ensure the best health outcomes for children.
+              </p>
+              <ul class="space-y-4 pt-4">
+                <li class="flex items-start gap-3">
+                  <div class="bg-emerald-100 p-1 rounded-full mt-1">
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-600"></i>
+                  </div>
+                  <span>Specialized training in Advanced Neonatal Life Support</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="bg-emerald-100 p-1 rounded-full mt-1">
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-600"></i>
+                  </div>
+                  <span>Expertise in developmental and behavioral pediatrics</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="bg-emerald-100 p-1 rounded-full mt-1">
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-600"></i>
+                  </div>
+                  <span>Committed to continuous medical education and research</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- FAQ & Location Section -->
-    <section id="location" class="py-24 bg-slate-900 text-white overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-                <div>
-                    <h2 class="text-sm font-bold text-emerald-400 uppercase tracking-widest mb-3">Visit Our Clinic</h2>
-                    <h3 class="text-4xl font-extrabold mb-8 tracking-tight">Location & Hours</h3>
-                    
-                    <div class="space-y-8">
-                        <div class="flex items-start gap-4">
-                            <div class="bg-white/10 p-3 rounded-xl"><i data-lucide="map-pin" class="w-6 h-6 text-emerald-400"></i></div>
-                            <div>
-                                <div class="font-bold text-lg mb-1">Clinic Address</div>
-                                <p class="text-slate-400">Dr. Puneet Anand Clinic, Delhi<br>Refer to business listing for exact location</p>
-                                <a href="https://share.google/bbP8uDkVH4LJvZ5A4" target="_blank" class="mt-3 inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium transition-colors">
-                                    View on Google Maps <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="bg-white/10 p-3 rounded-xl"><i data-lucide="clock" class="w-6 h-6 text-emerald-400"></i></div>
-                            <div>
-                                <div class="font-bold text-lg mb-1">Working Hours</div>
-                                <div class="grid grid-cols-2 gap-x-8 gap-y-1 text-slate-400">
-                                    <span>Mon - Sat:</span><span>10:00 AM - 8:00 PM</span>
-                                    <span>Sunday:</span><span>By Appointment Only</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 lg:mt-0">
-                    <div class="bg-white/5 backdrop-blur-lg p-8 rounded-3xl border border-white/10">
-                        <h4 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                            <i data-lucide="star" class="w-6 h-6 text-emerald-400"></i> Common Questions
-                        </h4>
-                        <div class="space-y-6">
-                            <div class="border-b border-white/10 pb-4">
-                                <div class="font-bold text-emerald-400 mb-2 text-sm uppercase tracking-wider">First Visit</div>
-                                <p class="text-slate-300 text-sm leading-relaxed">Please bring your child's previous medical records, vaccination card, and any current medications.</p>
-                            </div>
-                            <div class="border-b border-white/10 pb-4">
-                                <div class="font-bold text-emerald-400 mb-2 text-sm uppercase tracking-wider">Emergencies</div>
-                                <p class="text-slate-300 text-sm leading-relaxed">For after-hours emergencies, please call our dedicated emergency line for immediate attention.</p>
-                            </div>
-                            <div>
-                                <div class="font-bold text-emerald-400 mb-2 text-sm uppercase tracking-wider">Consultations</div>
-                                <p class="text-slate-300 text-sm leading-relaxed">Both in-person and video consultations are available. Please book in advance.</p>
-                            </div>
-                        </div>
-                        <div class="mt-8 pt-6 border-t border-white/10">
-                            <a href="https://share.google/bbP8uDkVH4LJvZ5A4" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
-                                Book Your Slot Now <i data-lucide="chevron-right" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-3">Patient Stories</h2>
+          <p class="text-4xl font-extrabold text-slate-900 tracking-tight">What Parents Say</p>
         </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+            <div class="flex gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            </div>
+            <p class="text-slate-600 italic mb-6 leading-relaxed">"Dr. Anand is incredibly patient and knowledgeable. He always takes the time to explain everything clearly."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">P</div>
+              <div class="font-bold text-slate-900">Priya Sharma</div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+            <div class="flex gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            </div>
+            <p class="text-slate-600 italic mb-6 leading-relaxed">"The best pediatrician in the area. My kids are always comfortable during visits, which is a huge relief."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">R</div>
+              <div class="font-bold text-slate-900">Rahul Verma</div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+            <div class="flex gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            </div>
+            <p class="text-slate-600 italic mb-6 leading-relaxed">"Very professional and caring. The clinic is clean and the staff is very helpful."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">A</div>
+              <div class="font-bold text-slate-900">Anjali Gupta</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="location" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          <div>
+            <h2 class="text-sm font-bold text-emerald-400 uppercase tracking-widest mb-3">Visit Our Clinic</h2>
+            <h3 class="text-4xl font-extrabold mb-8 tracking-tight">Location & Hours</h3>
+            
+            <div class="space-y-8">
+              <div class="flex items-start gap-4">
+                <div class="bg-white/10 p-3 rounded-xl">
+                  <i data-lucide="map-pin" class="w-6 h-6 text-emerald-400"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-lg mb-1">Clinic Address</div>
+                  <p class="text-slate-400">
+                    Dr. Puneet Anand Clinic<br />
+                    Refer to business listing for exact location in Delhi
+                  </p>
+                  <a 
+                    href="https://share.google/bbP8uDkVH4LJvZ5A4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-3 inline-flex items-center text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
+                  >
+                    View on Google Maps <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-white/10 p-3 rounded-xl">
+                  <i data-lucide="clock" class="w-6 h-6 text-emerald-400"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-lg mb-1">Working Hours</div>
+                  <div class="grid grid-cols-2 gap-x-8 gap-y-1 text-slate-400">
+                    <span>Mon - Sat:</span>
+                    <span>10:00 AM - 8:00 PM</span>
+                    <span>Sunday:</span>
+                    <span>By Appointment Only</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-white/10 p-3 rounded-xl">
+                  <i data-lucide="phone" class="w-6 h-6 text-emerald-400"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-lg mb-1">Contact Details</div>
+                  <p class="text-slate-400 mb-2">For inquiries and emergency support:</p>
+                  <div class="flex flex-col gap-2">
+                    <a href="tel:#" class="text-emerald-400 hover:text-emerald-300 font-medium transition-colors">Call Clinic</a>
+                    <a href="mailto:info@drpuneetanand.com" class="text-emerald-400 hover:text-emerald-300 font-medium transition-colors">info@drpuneetanand.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 lg:mt-0">
+            <div class="bg-white/5 backdrop-blur-lg p-8 rounded-3xl border border-white/10">
+              <h4 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i data-lucide="star" class="w-6 h-6 text-emerald-400"></i> Common Questions
+              </h4>
+              <div class="space-y-6">
+                <div class="border-b border-white/10 pb-4">
+                  <div class="font-bold text-emerald-400 mb-2 text-sm uppercase tracking-wider">First Visit</div>
+                  <p class="text-slate-300 text-sm leading-relaxed">
+                    Please bring your child's previous medical records, vaccination card, and any current medications they are taking.
+                  </p>
+                </div>
+                <div class="border-b border-white/10 pb-4">
+                  <div class="font-bold text-emerald-400 mb-2 text-sm uppercase tracking-wider">Emergencies</div>
+                  <p class="text-slate-300 text-sm leading-relaxed">
+                    For after-hours emergencies, please call our dedicated emergency line. We prioritize urgent cases for immediate attention.
+                  </p>
+                </div>
+                <div class="border-b border-white/10 pb-4">
+                  <div class="font-bold text-emerald-400 mb-2 text-sm uppercase tracking-wider">Vaccinations</div>
+                  <p class="text-slate-300 text-sm leading-relaxed">
+                    We follow the IAP recommended immunization schedule. You can discuss the specific schedule for your child during the consultation.
+                  </p>
+                </div>
+                <div>
+                  <div class="font-bold text-emerald-400 mb-2 text-sm uppercase tracking-wider">Consultations</div>
+                  <p class="text-slate-300 text-sm leading-relaxed">
+                    Both in-person and video consultations are available. Please book in advance through our business listing.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-8 pt-6 border-t border-white/10">
+                <a 
+                  href="https://share.google/bbP8uDkVH4LJvZ5A4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2"
+                >
+                  Book Your Slot Now <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Abstract background shapes -->
+      <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl"></div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-slate-50 border-t border-slate-200 text-center">
-        <p class="text-slate-500 text-sm">© 2026 Dr. Puneet Anand. All rights reserved.</p>
+    <footer class="py-12 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div class="flex items-center gap-2">
+            <div class="bg-emerald-600 p-1 rounded-lg">
+              <i data-lucide="stethoscope" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="text-lg font-bold tracking-tight text-slate-900">Dr. Puneet Anand</span>
+          </div>
+          <div class="text-slate-500 text-sm">
+            © <span id="year"></span> Dr. Puneet Anand. All rights reserved.
+          </div>
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-slate-400 hover:text-emerald-600 transition-colors">Privacy Policy</a>
+            <a href="#" class="text-slate-400 hover:text-emerald-600 transition-colors">Terms of Service</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+      // Initialize Lucide icons
+      lucide.createIcons();
+      
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-</body>
+  </body>
 </html>
+
